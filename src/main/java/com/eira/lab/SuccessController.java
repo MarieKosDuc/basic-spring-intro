@@ -1,5 +1,6 @@
 package com.eira.lab;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
@@ -8,7 +9,8 @@ import org.springframework.ui.Model;
 public class SuccessController {
 
     // initialization of a Success Service
-    SuccessService successService = new SuccessService();
+    @Autowired
+    SuccessService successService;
 
     // endpoint "/success"
     @GetMapping("/success")
